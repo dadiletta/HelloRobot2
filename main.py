@@ -43,7 +43,7 @@ p = Piggy()
 
 def menu():
     while True:
-        input = raw_input("Press 1 for cruise \n Press 2 for pulse \n Press 3 for sweep")
+        input = raw_input("Press 1 for cruise \nPress 2 for pulse \nPress 3 for sweep\n")
         if "1" in input:
             p.cruise()
         elif "2" in input:
@@ -54,7 +54,7 @@ def menu():
 
 try:
     menu()
-except Exception as ee:
+except(KeyboardInterrupt, SystemExit):
     print(ee)
     from gopigo import *
     stop()
