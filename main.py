@@ -55,6 +55,5 @@ def menu():
 try:
     menu()
 except(KeyboardInterrupt, SystemExit):
-    print(ee)
     from gopigo import *
     stop()
